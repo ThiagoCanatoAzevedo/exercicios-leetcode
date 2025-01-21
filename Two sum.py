@@ -13,21 +13,18 @@ use the same element twice.
 
 class Solution(object):
     def twoSum(self, nums, target):
-        contador = 0
-        while True:
-            primVal = nums[contador]
-            secVal = nums[contador+1]
+        hashmap = {}
         
-            soma = primVal+secVal
+        for i, num in enumerate(nums):
+            complemento = target - num
             
-            if(soma == target):
-                return(contador, contador+1)
-                break
-        
-            contador+=1
+            if complemento in hashmap:
+                return [hashmap[complemento], i]
+            
+            hashmap[num] = i
 
 # ------------------------------------------------------------------------------
 '''
-TIME COMPLEXITY: O(n^2)
+TIME COMPLEXITY: O(n)
 SPACE COMPLEXITY: O(1)
 '''
