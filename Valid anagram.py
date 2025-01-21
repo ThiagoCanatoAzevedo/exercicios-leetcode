@@ -26,6 +26,6 @@ class Solution(object):
 
 # ------------------------------------------------------------------------------
 '''
-TIME COMPLEXITY: O(n^2)
+TIME COMPLEXITY: O(n)
 SPACE COMPLEXITY: O(1)
 '''
